@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        margin-left:150px ;
+        margin-top:20px ;
+        width: 280px;
+        height: 30px;
+        border:1px solid rgb(39, 171, 192) ;
+    }
+     label{
+        width: 100px;
+        height: 30px;
+        margin-top:20px ;
+        background-color:rgb(212, 64, 64) ;
+        font-size:22px ;
+        border: none;
+     }
+     div{
+        display: flex;
+     }
+     h1{
+        margin-left:150px ;
+        margin-top:150px ;
+     }
+</style>
+<body>
+    <h1>Password Checker jQuery</h1>
+
+
+   <div>
+    <input id="one" type="password" oninput="main()">
+    <label id="demo"></label>
+   </div>
+    
+
+
+    <script>
+
+
+function main(){
+
+    let a =document.getElementById("one").value;
+
+    if( a.length <=1||a.length<=4 ){
+       document .getElementById("demo").innerHTML="week"
+       document.getElementById("demo").style.color="white"
+    }
+
+    else if( a.length <=5||a.length<=8 ){
+        document.getElementById("demo").innerHTML="medium"
+        document.getElementById("demo").style.color="blue"
+    }
+
+    else{
+        document.getElementById("demo").innerHTML="strong"
+        document.getElementById("demo").style.color="green"
+    }
+
+}
+
+
+    </script>
+</body>
+</html>
